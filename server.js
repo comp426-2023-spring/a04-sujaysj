@@ -1,4 +1,5 @@
 import minimist from 'minimist'
+import bodyParser from 'body-parser'
 const args = minimist(process.argv.slice(2))
 const port = args.port || 5000
 import { rps, rpsls } from './lib/rpsls.js'
