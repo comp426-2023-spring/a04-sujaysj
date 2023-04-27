@@ -34,7 +34,7 @@ app.get('/app/rpsls/play/:shot', (req, res, next) => {
 })
 
 app.get('*', (req, res, next) => {
-    res.status(400).type('txt').send('404 NOT FOUND')
+    res.status(404).type('txt').send('404 NOT FOUND')
 })
 
 app.listen(port)
