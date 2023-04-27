@@ -21,11 +21,11 @@ app.get('/app/rpsls', (req, res, next) => {
 })
 
 app.post('/app/rps/play', (req, res, next) => {
-    res.status(200).send(rps(req.body.shot()))
+    res.status(200).send(rps(req.body.shot))
 })
 
 app.post('/app/rps/play', (req, res, next) => {
-    res.status(200).send(rps(req.query.shot()))
+    res.status(200).send(rps(req.query.shot))
 })
 
 app.get('/app/rps/play/:shot', (req, res, next) => {
