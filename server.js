@@ -5,6 +5,9 @@ import { rps, rpsls } from './lib/rpsls.js'
 import express from 'express'
 var app = express()
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/app', (req, res, next) => {
     res.status(200).send("200 OK")
 })
