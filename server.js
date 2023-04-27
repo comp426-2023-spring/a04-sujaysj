@@ -1,7 +1,8 @@
-const args = require('minimist')(process.argv.slice(2))
+import minimist from 'minimist'
+const args = minimist(process.argv.slice(2))
 const port = args.port || 5000
 import { rps, rpsls } from './lib/rpsls.js'
-var express = require('express')
+import express from 'express'
 var app = express()
 
 app.get('/app', (req, res, next) => {
