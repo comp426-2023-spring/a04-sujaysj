@@ -17,7 +17,7 @@ app.get('/app/rpsls', (req, res, next) => {
     res.status(200).type('json').send(rpsls())
 })
 
-app.get('/app/rps/play', (req, res, next) => {
+app.post('/app/rps/play', (req, res, next) => {
     res.status(200).type('json').send(rps(req.body.shot()))
 })
 
@@ -25,7 +25,7 @@ app.get('/app/rps/play/:shot', (req, res, next) => {
     res.status(200).type('json').send(rps(req.params.shot))
 })
 
-app.get('/app/rpsls/play', (req, res, next) => {
+app.post('/app/rpsls/play', (req, res, next) => {
     res.status(200).type('json').send(rpsls(req.body.shot))
 })
 
